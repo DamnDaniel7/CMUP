@@ -1,0 +1,155 @@
+2021-06-20 14:05:38.757263 REQUEST:damn these Wi-Fi
+2021-06-20 14:05:38.762712 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:05:38.764351 RESPONSE:{'Status': 500}
+2021-06-20 14:12:16.951150 REQUEST:damn these Wi-Fi
+2021-06-20 14:12:16.954570 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:12:16.956129 RESPONSE:{'Status': 500}
+2021-06-20 14:15:47.708724 REQUEST:f*** this wi-fi
+2021-06-20 14:15:47.713066 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:15:47.714799 RESPONSE:{'Status': 500}
+2021-06-20 14:20:43.218403 REQUEST:damn this wi-fi
+2021-06-20 14:20:43.222401 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:20:43.224401 RESPONSE:{'Status': 500}
+2021-06-20 14:22:08.735093 REQUEST:internet speed is down
+2021-06-20 14:22:08.737085 RESPONSE:TESTE TESTE
+2021-06-20 14:22:08.739280 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:22:08.739868 RESPONSE:{'Status': 500}
+2021-06-20 14:24:07.910621 REQUEST:Internet is slow
+2021-06-20 14:24:07.912649 RESPONSE:<class 'str'>
+2021-06-20 14:24:07.912887 RESPONSE:TESTE TESTE
+2021-06-20 14:24:07.914820 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:24:07.916402 RESPONSE:{'Status': 500}
+2021-06-20 14:27:31.253541 REQUEST:Internet is slow
+2021-06-20 14:27:31.257564 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:27:31.260157 RESPONSE:{'Status': 500}
+2021-06-20 14:28:55.263995 REQUEST:internet slow
+2021-06-20 14:28:55.265822 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:28:55.266466 RESPONSE:{'Status': 500}
+2021-06-20 14:33:05.039001 REQUEST:Internet is slow
+2021-06-20 14:33:05.042540 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:33:05.044959 RESPONSE:{'Status': 500}
+2021-06-20 14:33:35.470678 REQUEST:Internet is slow
+2021-06-20 14:33:35.472479 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:33:35.473124 RESPONSE:{'Status': 500}
+2021-06-20 14:33:51.086036 REQUEST:Internet is slow
+2021-06-20 14:33:51.087331 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:33:51.087762 RESPONSE:{'Status': 500}
+2021-06-20 14:34:44.934825 REQUEST:Internet is slow
+2021-06-20 14:34:44.937035 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:34:44.937625 RESPONSE:{'Status': 500}
+2021-06-20 14:35:02.858757 REQUEST:Internet is slow
+2021-06-20 14:35:02.860060 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:35:02.860460 RESPONSE:{'Status': 500}
+2021-06-20 14:35:33.683095 REQUEST:Internet is slow
+2021-06-20 14:35:33.685447 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:35:33.686009 RESPONSE:{'Status': 500}
+2021-06-20 14:35:51.752547 REQUEST:Internet is slow
+2021-06-20 14:35:51.753891 RESPONSE:ERROR processing entity extraction
+2021-06-20 14:35:51.754682 RESPONSE:{'Status': 500}
+2021-06-20 14:36:12.137888 REQUEST:Internet is slow
+2021-06-20 14:36:53.696822 REQUEST:Internet is slow
+2021-06-20 14:36:53.826202 RESPONSE:{'Status': 200, 'Entities': ['Internet', 'fodido'], 'Sentiment': 'Neutral'}
+2021-06-20 14:37:47.816386 REQUEST:Internet is slow
+2021-06-20 14:37:48.000935 RESPONSE:{'Status': 200, 'Entities': ['Internet'], 'Sentiment': 'Neutral'}
+2021-06-20 14:38:47.660521 REQUEST:internet is too slow
+2021-06-20 14:38:48.065554 RESPONSE:{'Status': 200, 'Entities': ['internet'], 'Sentiment': 'Neutral'}
+2021-06-20 14:40:12.518174 REQUEST:internet is too damn slow
+2021-06-20 14:40:13.486026 RESPONSE:{'Status': 200, 'Entities': ['internet'], 'Sentiment': 'Negative'}
+2021-06-20 14:41:28.573037 REQUEST:internet is too damn slow
+2021-06-20 14:41:28.937996 RESPONSE:{'Status': 200, 'Entities': ['internet'], 'Sentiment': 'Negative'}
+2021-06-20 14:42:51.981391 REQUEST:donut is too damn slow today
+2021-06-20 14:42:52.238044 RESPONSE:{'Status': 200, 'Entities': ['donut', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 14:52:19.835139 REQUEST:internet is too damn slow today
+2021-06-20 14:52:19.840350 RESPONSE:{'Status': 200, 'Entities': ['internet', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:01:00.105046 REQUEST:internet is too damn slow today
+2021-06-20 15:01:00.134909 RESPONSE:{'Status': 200, 'Entities': ['internet', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:05:29.291063 REQUEST:internet sister dancehall today
+2021-06-20 15:05:29.304760 RESPONSE:{'Status': 200, 'Entities': ['internet', 'sister', 'dancehall', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 15:05:44.776794 REQUEST:internet is too damn slow today
+2021-06-20 15:05:44.781581 RESPONSE:{'Status': 200, 'Entities': ['internet', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:12:16.245141 REQUEST:internet speed is too damn slow today
+2021-06-20 15:12:16.444739 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:21:49.756105 REQUEST:internet status to dance club today
+2021-06-20 15:21:49.760100 RESPONSE:{'Status': 200, 'Entities': ['internet', 'status', 'club', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 15:29:18.190618 REQUEST:internet speed is too damn slow today
+2021-06-20 15:29:18.194767 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:34:18.117684 REQUEST:internet speed is too damn slow today
+2021-06-20 15:34:18.122835 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:36:52.857934 REQUEST:internet speed is too damn slow today
+2021-06-20 15:36:52.864551 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 15:51:09.384084 REQUEST:my internet speed is too damn slow
+2021-06-20 15:51:09.395210 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed'], 'Sentiment': 'Negative'}
+2021-06-20 15:56:08.854690 REQUEST:internet speed is too damn slow
+2021-06-20 15:56:08.860717 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed'], 'Sentiment': 'Negative'}
+2021-06-20 16:00:40.905403 REQUEST:Bennett's pay the students well today
+2021-06-20 16:00:40.911411 RESPONSE:{'Status': 200, 'Entities': ['Bennett', 'pay', 'students', 'today'], 'Sentiment': 'Positive'}
+2021-06-20 16:00:57.903779 REQUEST:internet speed is too damn slow today
+2021-06-20 16:00:57.905279 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 16:27:30.346883 REQUEST:my internet speed today is too damn slow
+2021-06-20 16:27:30.559174 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 16:31:53.064027 REQUEST:my internet speed today is too damn slow
+2021-06-20 16:31:53.072895 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 16:45:13.610720 REQUEST:my internet speed tonight is too damn low
+2021-06-20 16:45:13.761888 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'tonight'], 'Sentiment': 'Negative'}
+2021-06-20 16:49:52.152017 REQUEST:my internet speed is to download today
+2021-06-20 16:49:52.160884 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 16:50:04.059836 REQUEST:my internet speed today is to download
+2021-06-20 16:50:04.061570 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 16:50:14.329056 REQUEST:my internet speed today is too low
+2021-06-20 16:50:14.330806 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 16:55:00.131312 REQUEST:my internet speed is too low
+2021-06-20 16:55:00.135858 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed'], 'Sentiment': 'Negative'}
+2021-06-20 17:09:55.616607 REQUEST:my internet speed is too low today
+2021-06-20 17:09:55.627549 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:17:09.275380 REQUEST:my internet speed is too slow
+2021-06-20 17:17:09.281548 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed'], 'Sentiment': 'Neutral'}
+2021-06-20 17:17:24.947593 REQUEST:my internet speed today is Jordan slow
+2021-06-20 17:17:24.950298 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today', 'Jordan'], 'Sentiment': 'Neutral'}
+2021-06-20 17:17:33.213064 REQUEST:my internet speed today is too damn slow
+2021-06-20 17:17:33.216187 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:21:30.858616 REQUEST:maintenance babies to download today
+2021-06-20 17:21:30.865069 RESPONSE:{'Status': 200, 'Entities': ['maintenance', 'babies', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 17:21:39.018636 REQUEST:neutral my internet speed is too damn low today
+2021-06-20 17:21:39.023035 RESPONSE:{'Status': 200, 'Entities': ['speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:21:47.564580 REQUEST:my internet speed is too damn low today
+2021-06-20 17:21:47.568030 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:25:52.610929 REQUEST:ethernet speed is too damn low today
+2021-06-20 17:25:52.616403 RESPONSE:{'Status': 200, 'Entities': ['ethernet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:26:04.147273 REQUEST:my internet speed is too damn low today
+2021-06-20 17:26:04.149241 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:32:30.410850 REQUEST:my internet speed is too damn low today
+2021-06-20 17:32:30.414230 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:41:51.599308 REQUEST:my internet speed is too damn slow today
+2021-06-20 17:41:51.609874 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:51:13.050442 REQUEST:find tonight's Pizza days to waffle
+2021-06-20 17:51:13.060572 RESPONSE:{'Status': 200, 'Entities': ['tonight', 'Pizza', 'days'], 'Sentiment': 'Neutral'}
+2021-06-20 17:51:21.520485 REQUEST:my internet speed today is awful
+2021-06-20 17:51:21.522960 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:53:21.959808 REQUEST:my internet speed today is awful
+2021-06-20 17:53:21.967501 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 17:59:59.077350 REQUEST:my internet speed is too slow today
+2021-06-20 17:59:59.088283 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 18:00:15.092551 REQUEST:my internet speed is too damn slow today
+2021-06-20 18:00:15.096120 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:02:59.308051 REQUEST:my internet speed is to Waffle today
+2021-06-20 18:02:59.484408 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 18:03:09.120373 REQUEST:my internet speed is too slow today
+2021-06-20 18:03:09.123698 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Neutral'}
+2021-06-20 18:03:18.166618 REQUEST:my internet speed is awful today
+2021-06-20 18:03:18.168295 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:04:22.050277 REQUEST:test test test
+2021-06-20 18:04:22.055935 RESPONSE:{'Status': 200, 'Entities': ['test', 'test', 'test'], 'Sentiment': 'Neutral'}
+2021-06-20 18:04:31.436684 REQUEST:my internet speed is slow
+2021-06-20 18:04:31.441680 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed'], 'Sentiment': 'Neutral'}
+2021-06-20 18:04:41.883036 REQUEST:my internet speed is awful today
+2021-06-20 18:04:41.884546 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:10:21.960605 REQUEST:internet speed is awful today
+2021-06-20 18:10:22.211561 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:15:03.554477 REQUEST:my internet speed is awful today
+2021-06-20 18:15:03.561255 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:30:24.668770 REQUEST:my internet speed is awful today
+2021-06-20 18:30:24.839375 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:39:37.906481 REQUEST:reminder net speed is awful today
+2021-06-20 18:39:37.932273 RESPONSE:{'Status': 200, 'Entities': ['reminder', 'net', 'speed', 'today'], 'Sentiment': 'Negative'}
+2021-06-20 18:39:48.136847 REQUEST:my internet speed is awful today
+2021-06-20 18:39:48.139564 RESPONSE:{'Status': 200, 'Entities': ['internet', 'speed', 'today'], 'Sentiment': 'Negative'}
