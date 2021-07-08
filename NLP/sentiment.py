@@ -8,6 +8,11 @@ LOG_FILE="info.log"
 class Sentiment():
 	def __init__(self) -> None:
 		self.model = self._initiate()
+		self.HOME_CONTEXT=["home","house","room","apartment","kitchen","bedroom","bathroom","aisle"]
+		self.DARK_CONTEXT=["dark","black"]
+		self.BRIGHT_CONTEXT=["bright","light"]
+		self.LOUD_CONTEXT=["loud","noisy","high","sound","big","shout"]
+		self.QUIET_CONTEXT=["quiet","low","silence","sound","small","soft","muted"]
 		
 	def _initiate(self):
 		nltk.download('averaged_perceptron_tagger')
@@ -61,32 +66,44 @@ class Sentiment():
 		else:	
 			return 200
 
-	def process_text(text):
+	def _extract_relevant_keywords(self,tokens,context):
 		'''
-		tokenize, etc.
+		Get relevant keywords from context
 		'''
-		return text
+		relevant=[]
+		if context=='home':
+			relevant+=[token for s in tokens for token in s if token in self.HOME_CONTEXT]
+		elif context=='dark':
+			relevant+=[token for s in tokens for token in s if token in self.DARK_CONTEXT]
+		elif context=='bright':
+			relevant+=[token for s in tokens for token in s if token in self.BRIGHT_CONTEXT]
+		elif context=='loud':
+			relevant+=[token for s in tokens for token in s if token in self.LOUD_CONTEXT]
+		elif context=='quiet':
+			relevant+=[token for s in tokens for token in s if token in self.QUIET_CONTEXT]
+		return relevant
 
-	def extract_entities(self, text):
+	def extract_entities(self, text,context):
 		'''
 		nltk
 		'''
-
 		try:
 			#Part-of-Speech
 			string = nltk.tokenize.sent_tokenize(text)
-			print(string)
 			tokens=[nltk.tokenize.word_tokenize(t) for t in string]
 			pos=[nltk.pos_tag(token) for token in tokens]
 
+			relevant_keywords=self._extract_relevant_keywords(tokens,context)			
 			#Entity-Recognition
-		
+			
 			all_entities=[]
+			
 			for sentence in pos:
 				all_entities+=[entity[0] for entity in sentence if 'NN' in entity[1]]
-			return all_entities
+			
+			return all_entities+relevant_keywords
 
-		except Exception:
+		except NotImplementedError:
 			self.write_log("ERROR processing entity extraction")
 			return ""
 
@@ -109,16 +126,14 @@ class Sentiment():
 	def audio_emotion_recognition(self, audio):
 		raise NotImplementedError("Not implemented. Requires: AUDIO_FILE")
 
-	def pipeline(self, texto):
+	def pipeline(self, texto,context=None):
 		'''
 		Pipeline
 		'''
 		#write to log timestamp and request info
 		self.write_log(texto,True)
 
-		#tokens=process_text(data['text'])
-
-		entities=self.extract_entities(texto)
+		entities=self.extract_entities(texto,context)
 		sentiment=self.sentiment_analysis(texto)
 
 		status=self._eval_status_response({"e":entities,"s":sentiment})
@@ -136,4 +151,4 @@ class Sentiment():
 
 if __name__ == '__main__':
 	sentiment = Sentiment()
-	sentiment.pipeline("Internet is slow")
+	sentiment.pipeline("The TV is too quiet","quiet")
