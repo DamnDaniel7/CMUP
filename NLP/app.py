@@ -28,5 +28,36 @@ def speed() -> Response:
     print(res)
     return jsonify(res)
 
+@app.route('/who', methods=['POST'])
+@app.route('/home', methods=['POST'])
+def who_home() -> Response:
+    data = request.get_json()
+    res = nlk.pipeline(data["texto"])
+    return jsonify(res)
+
+@app.route('/dark', methods=['POST'])
+def light_on() -> Response:
+    data = request.get_json()
+    res = nlk.pipeline(data["texto"])
+    return jsonify(res)
+
+@app.route('/bright', methods=['POST'])
+def light_off() -> Response:
+    data = request.get_json()
+    res = nlk.pipeline(data["texto"])
+    return jsonify(res)
+
+@app.route('/loud', methods=['POST'])
+def volume_down() -> Response:
+    data = request.get_json()
+    res = nlk.pipeline(data["texto"])
+    return jsonify(res)
+
+@app.route('/quiet', methods=['POST'])
+def volume_up() -> Response:
+    data = request.get_json()
+    res = nlk.pipeline(data["texto"])
+    return jsonify(res)
+
 if __name__ == '__main__':
     app.run('localhost', 8000, debug=True)
