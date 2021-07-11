@@ -1,7 +1,12 @@
 import json
 import nltk
+import pickle
+import librosa as lb
+import soundfile as sf
+import numpy as np
 from datetime import datetime
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from sklearn.neural_network import MLPClassifier
 
 LOG_FILE="info.log"
 
@@ -109,7 +114,7 @@ class Sentiment():
 
 	def sentiment_analysis(self, text):
 		'''
-		VADER or empath
+		VADER
 		'''
 		try:
 			val= self.model.polarity_scores(text)
@@ -123,8 +128,49 @@ class Sentiment():
 			self.write_log("ERROR processing sentiment analysis")
 			return ""	
 
-	def audio_emotion_recognition(self, audio):
-		raise NotImplementedError("Not implemented. Requires: AUDIO_FILE")
+	def audio_features(self,file_title, mfcc, chroma, mel):
+		with sf.SoundFile(file_title) as audio_recording:
+			aud = audio_recording.read(dtype="float32")
+			audio= lb.to_mono(aud)
+			sample_rate = audio_recording.samplerate
+			if chroma:
+				stft=np.abs(lb.stft(audio,n_fft=8192))
+				result=np.array([])
+			if mfcc:
+				mfccs=np.mean(lb.feature.mfcc(y=audio, sr=sample_rate, n_mfcc=40,n_fft=8192).T, axis=0)
+				result=np.hstack((result, mfccs))
+			if chroma:
+				chroma=np.mean(lb.feature.chroma_stft(S=stft, sr=sample_rate,n_fft=8192).T,axis=0)
+				result=np.hstack((result, chroma))
+			if mel:
+				mel=np.mean(lb.feature.melspectrogram(audio, sr=sample_rate,n_fft=8192).T,axis=0)
+				result=np.hstack((result, mel))
+			return result
+
+	def audio_emotion_recognition(self, audio='output.wav'):
+		try:
+			with open("model/mlp_classifier1.model","rb") as trained_file:
+				model=pickle.load(trained_file)
+
+				features=self.audio_features('output.wav',True,True,True)
+				predicted_emotion=model.predict(features.reshape(1,-1))
+				if predicted_emotion=='happy' or predicted_emotion=='calm':
+					return 'Positive'
+				elif predicted_emotion=='neutral':
+					return 'Neutral'
+				else:
+					return 'Negative'
+		except Exception as e:
+			self.write_log("ERROR processing audio emotion recognition")
+			return ""
+			
+	def _verify_negative_sentiment(self,s,em):
+		if s=='Negative' or em=='Negative':
+			return 'Negative'
+		elif s=='Neutral' or em=='Neutral':
+			return 'Neutral'
+		else:
+			return 'Positive'
 
 	def pipeline(self, texto,context=None):
 		'''
@@ -135,10 +181,13 @@ class Sentiment():
 
 		entities=self.extract_entities(texto,context)
 		sentiment=self.sentiment_analysis(texto)
+		emotion=self.audio_emotion_recognition()
 
-		status=self._eval_status_response({"e":entities,"s":sentiment})
+		val=self._verify_negative_sentiment(sentiment,emotion)
+
+		status=self._eval_status_response({"e":entities,"s":val})
 		if status==200:
-			response={"Status": status, "Entities":entities, "Sentiment": sentiment}
+			response={"Status": status, "Entities":entities, "Sentiment": val}
 		else:
 			response={"Status": status}
 
@@ -151,4 +200,4 @@ class Sentiment():
 
 if __name__ == '__main__':
 	sentiment = Sentiment()
-	sentiment.pipeline("The TV is too quiet","quiet")
+	sentiment.pipeline("Why is the room so goddamn bright?","bright")
